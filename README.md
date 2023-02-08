@@ -1,2 +1,2 @@
 # alx-system_engineering-devops
-Script writing
+This repo is show some basics of script writing
