@@ -1,2 +1,2 @@
 #!/bin/bash
-awk 'NR==3' iacta
+sed -n '5p' iacta
