@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+#The script creates the highlander process
 function sigterm_func {
 	echo "I am invincible!!!"
 	exit 0

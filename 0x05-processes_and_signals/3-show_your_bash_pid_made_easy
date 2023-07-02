@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+# The script shows the PID and the process name of processes containing "Bash"
 for pid in /proc/[0-9]*/; do
 	pid=$(basename "$pid_dir")
 	

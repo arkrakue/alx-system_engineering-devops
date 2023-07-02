@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+#The script kills the highlander process
 pid=$(pgrep -f 'highlander')
 kill -9 "$pid"
 if ps -p "$pid" > /dev/null; then

@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+#The script dsiplays the text infinitely
 while true
 do
 	echo "To infinity and beyond"
