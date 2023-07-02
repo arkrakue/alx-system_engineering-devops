@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+function sigterm_func {
+	echo "I am invincible!!!"
+	exit 0
+}
+
+trap sigterm_func SIGTERM
+
+while true; do
+	echo "To infinity and beyond"
+	sleep 2
+done

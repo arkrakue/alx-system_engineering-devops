@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+pid=$(pgrep -f 'highlander')
+kill -9 "$pid"
+if ps -p "$pid" > /dev/null; then
+	kill -9 "$pid"
+fi
+
