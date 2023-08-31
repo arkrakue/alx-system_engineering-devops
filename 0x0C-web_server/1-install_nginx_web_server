@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# The script installs nginx on the web server
+
+# Update the package lists for upgrades and new package installations
+apt-get -y update
+
+# Install nginx
+apt-get -y install nginx
+
+# Create a custom homepage
+echo "Hello World!" > /var/www/html/index.nginx-debian.html
+
+# Configure nginx to listen on port 80
+sed -i 's/8080/80/g' /etc/nginx/sites-available/default
+
+# Restart nginx to apply the changes
+service nginx restart
