@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# This script starts Apache in a Docker container and sets the ServerName directive
+
+
+# Connect to the Docker container and run the commands
+    # Add ServerName directive to Apache configuration
+    echo 'ServerName localhost' >> /etc/apache2/apache2.conf
+
+    # Start Apache
+    service apache2 restart
