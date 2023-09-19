@@ -1,0 +1,34 @@
+#!/bin/bash
+
+# Check if nginx is installed
+if ! command -v nginx &> /dev/null
+then
+    echo "Nginx is not installed. Installing now..."
+    sudo apt-get install -y nginx
+else
+    echo "Nginx is already installed."
+fi
+
+# Ensure nginx is running
+sudo systemctl start nginx
+
+# Check if nginx is active and running
+if systemctl status nginx | grep -q 'active (running)'
+then
+    echo "Nginx service is active and running."
+else
+    echo "Nginx service is not running. Starting now..."
+    sudo systemctl start nginx
+fi
+
+# Check if nginx is listening on port 80
+if sudo netstat -plntu | grep -q ':80'
+then
+    echo "Nginx is listening on port 80."
+else
+    echo "Nginx is not listening on port 80. Please check your configuration."
+fi
+
+# Reconfigure ngnix to 80
+sudo ln -sf /etc/ngnix/sites-available/default etc/ngnix/sites-enabled/
+sudo service ngnix restart
