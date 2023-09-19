@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#Reconfiguration of Nginx
 
 # Check if nginx is installed
 if ! command -v nginx &> /dev/null
